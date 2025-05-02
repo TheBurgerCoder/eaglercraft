@@ -15,6 +15,13 @@ async function open_1_12_2() {
   const newWindow = window.open('about:blank', '_blank');
   newWindow.document.write(html);
   newWindow.document.close();
+  
+  const response2 = await fetch('spoofer.html');
+  const html2 = await response2.text();
+
+  const newWindow2 = window.open('about:blank', '_blank');
+  newWindow2.document.write(html2);
+  newWindow2.document.close();
 }
 async function open_1_8_8() {
   const response = await fetch('index.html');
@@ -23,7 +30,15 @@ async function open_1_8_8() {
   const newWindow = window.open('about:blank', '_blank');
   newWindow.document.write(html);
   newWindow.document.close();
+    
+  const response2 = await fetch('spoofer.html');
+  const html2 = await response2.text();
+
+  const newWindow2 = window.open('about:blank', '_blank');
+  newWindow2.document.write(html2);
+  newWindow2.document.close();
 }
+
 </script>
     </body>
 </html>
