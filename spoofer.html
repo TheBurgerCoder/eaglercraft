@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Title</title>
+    </head>
+    <body>
+    <button onclick="open_1_8_8()">Open EaglerCraft 1.8.8</button>
+    <button onclick="open_1_12_2()">Open EaglerCraft 1.12.2</button>
+<script>
+async function open_1_12_2() {
+  const response = await fetch('1.12.html');
+  const html = await response.text();
+
+  const newWindow = window.open('about:blank', '_blank');
+  newWindow.document.write(html);
+  newWindow.document.close();
+}
+async function open_1_8_8() {
+  const response = await fetch('index.html');
+  const html = await response.text();
+
+  const newWindow = window.open('about:blank', '_blank');
+  newWindow.document.write(html);
+  newWindow.document.close();
+}
+</script>
+    </body>
+</html>
